@@ -1,14 +1,12 @@
-public final class Empleado {
-    private final int id;
-    private final String nombre;
-    private final String apellidos;
-    private final Direccion direccion;
+public class Empleado {
+    private int id;
+    private String nombre;
+    private Direccion direccion;
 
-    public Empleado(int id, String nombre, String apellidos, Direccion direccion) {
+    public Empleado(int id, String nombre, Direccion direccion) {
         this.id = id;
         this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.direccion = new Direccion(direccion.getCalle(), direccion.getNumero(), direccion.getCiudad(), direccion.getCodigoPostal());
+        this.direccion = direccion;
     }
 
     public int getId() {
@@ -18,18 +16,20 @@ public final class Empleado {
     public String getNombre() {
         return nombre;
     }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
+    
     public Direccion getDireccion() {
-        return new Direccion(direccion.getCalle(), direccion.getNumero(), direccion.getCiudad(), direccion.getCodigoPostal());
+        return direccion;
     }
 
-    public Empleado cambiarNombre(String nuevoNombre) {
-
-        return new Empleado(id, nuevoNombre, apellidos, direccion);
+    public void setId(int id) {
+        this.id = id;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
 }
