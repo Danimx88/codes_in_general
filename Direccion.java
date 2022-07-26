@@ -1,10 +1,10 @@
 public class Direccion {
-    String calle;
-    int numero;
-    String ciudad;
-    int codigoPostal;
+    private String calle;
+    private int numero;
+    private Ciudad ciudad;
+    private int codigoPostal;
 
-    public Direccion(String calle, int numero, String ciudad, int codigoPostal) {
+    public Direccion(String calle, int numero, Ciudad ciudad, int codigoPostal) {
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;
@@ -27,11 +27,11 @@ public class Direccion {
         this.numero = numero;
     }
 
-    public String getCiudad() {
+    public Ciudad getCiudad() {
         return ciudad;
     }
 
-    public void setCiudad(String ciudad) {
+    public void setCiudad(Ciudad ciudad) {
         this.ciudad = ciudad;
     }
 
