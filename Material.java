@@ -1,6 +1,7 @@
 public class Material {
 
     private Double precioMetroCuadrado;
+    private Double precioLineal;
 
     public Material(Double precioMetroCuadrado) {
         this.precioMetroCuadrado = precioMetroCuadrado;
@@ -8,5 +9,8 @@ public class Material {
 
     public Double obtenerPrecioMetroCuadrado() {
         return precioMetroCuadrado;
+    }
+    public Double obtenerPrecioLineal() {
+        return precioLineal;
     }
 }

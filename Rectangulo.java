@@ -13,11 +13,12 @@ public class Rectangulo {
         this.alto = alto;
     }
 
-    public double calcularArea(){
+    public double calcularAreaRectangulo() {
+
         return alto * ancho;
     }
 
-    public void dibujar(){
-
+    public double calcularPerimetroRectángulo() {
+        return 2 * alto + 2 * ancho;
     }
 }
