@@ -1,6 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Cliente cliente = Cliente.obtenerClienteX();
-        
+        Coleccion coleccion = new Coleccion();
+        Coleccion coleccionOrdenada = coleccion.ordenar();
+
+
+       //// #####################################
+
+        Coleccion miColeccionOrdenada = Utils.ordenarColeccion(coleccion);
     }
 }
+
+
