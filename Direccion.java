@@ -1,12 +1,14 @@
 public class Direccion {
     private String calle;
-    private String numero;
-    private String ciudad;
+    private int numero;
+    private Ciudad ciudad;
+    private int codigoPostal;
 
-    public Direccion(String calle, String numero, String ciudad) {
+    public Direccion(String calle, int numero, Ciudad ciudad, int codigoPostal) {
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;
+        this.codigoPostal = codigoPostal;
     }
 
     public String getCalle() {
@@ -17,28 +19,37 @@ public class Direccion {
         this.calle = calle;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    public String getCiudad() {
+    public Ciudad getCiudad() {
         return ciudad;
     }
 
-    public void setCiudad(String ciudad) {
+    public void setCiudad(Ciudad ciudad) {
         this.ciudad = ciudad;
     }
-    
-     @Override
+
+    public void setCodigoPostal(int codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    public int getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    @Override
     public String toString() {
         return "Direccion{" +
                 "calle='" + calle + '\'' +
                 ", numero='" + numero + '\'' +
                 ", ciudad='" + ciudad + '\'' +
+                ", codigoPostal=" + codigoPostal +
                 '}';
     }
 }
